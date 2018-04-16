@@ -4,5 +4,5 @@
 * Number of each type of packet
 	** solved in data/
 * Amount of traffic per minute (in bytes)
+	** Solved in data/ **
 * Number of TCP vs UDP connections
-* Avg size of TCP vs UDP connections
