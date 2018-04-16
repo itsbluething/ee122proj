@@ -1,12 +1,2 @@
-Destination,Length
-2607:f140:400:a023:c4a0:6ac1:218d:34ca,14039
-2a03:2880:f009:e:face:b00c:0:3,5
-2a03:2880:f00d:110:face:b00c:0:2,43
-2a03:2880:f00d:115:face:b00c:0:3,552
-2a03:2880:f00d:13:face:b00c:0:1823,384
-2a03:2880:f00d:1:face:b00c:0:1,374
-2a03:2880:f00d:8:face:b00c:0:1,868
-2a03:2880:f027:18:face:b00c:0:3,45
-2a03:2880:f10d:183:face:b00c:0:25de,21
-2a03:2880:f10d:83:face:b00c:0:25de,821
-2a03:2880:f10d:84:face:b00c:0:14c9,12
+Protocol,No.,Time,Source,Destination,Length,Info
+TLSv1.3,17164,17164,17164,17164,17164,17164

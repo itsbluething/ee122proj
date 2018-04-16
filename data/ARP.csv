@@ -1,4 +1,2 @@
-Destination,Length
-Broadcast,21859
-IntelCor_86:da:c1,1
-MurataMa_4f:8a:bb,1
+Protocol,No.,Time,Source,Destination,Length,Info
+ARP,21861,21861,21861,21861,21861,21861

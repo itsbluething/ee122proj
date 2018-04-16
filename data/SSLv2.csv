@@ -1,2 +1,2 @@
-Destination,Length
-2607:f140:400:a023:c4a0:6ac1:218d:34ca,45
+Protocol,No.,Time,Source,Destination,Length,Info
+SSLv2,45,45,45,45,45,45
