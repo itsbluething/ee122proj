@@ -14,7 +14,6 @@ def example():
     pass
 
 def dest_recv_most():
-<<<<<<< HEAD
     temp=df.groupby(['Source']).sum().sort_values('Length',ascending=False)
     temp.to_csv('data/dest_recv_most.csv')
 
