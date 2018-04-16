@@ -28,11 +28,19 @@ def count_packet_type():
 def stat_per_minute():
 	temp=df.groupby('int_time')['Length'].sum()
 	temp.to_csv(DIR_NAME+'bytes_per_minute.csv')
+
+def extract_fin():
+	df[df['Info'].str.contains("FIN")].count().to_csv(DIR_NAME+'FIN.csv')
+
+def UDP_stat():
+	
+
 def main():
     # dest_recv_most()
     # src_send_most()
     # count_packet_type()
-    stat_per_minute()
+    # stat_per_minute()
+    extract_fin()
 
 if __name__ == '__main__':
     main()
