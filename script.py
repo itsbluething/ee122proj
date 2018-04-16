@@ -25,9 +25,9 @@ def Count_packet_type():
 	for i in PROTOCOL_LIST:
 		temp =df[df['Protocol']==i]
 		if i=='HTTP/XML':
-			temp.groupby(['Protocol']).count().to_csv(DIR_NAME+'HTTP_XML.csv')
+			temp.groupby(['Protocol']).count()['Length'].to_csv(DIR_NAME+'HTTP_XML.csv')
 		else:
-			temp.groupby(['Protocol']).count().to_csv(DIR_NAME+i+'.csv')
+			temp.groupby(['Protocol']).count()['Length'].to_csv(DIR_NAME+i+'.csv')
 def main():
     Count_packet_type()
 
