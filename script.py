@@ -10,23 +10,24 @@ def group_by(col):
     return grouped
 
 def example():
-	pass
-def Dest_rece_most():
-	temp=df.groupby(['Source']).sum().sort_values('Length',ascending=False)
-	temp.to_csv('data/Src_send_most.csv')
-def Src_send_most():
-	temp=df.groupby(['Destination']).sum().sort_values('Length',ascending=False)
-	temp.to_csv('data/Dest_rec_most.csv')
-def Count_packet_type():
-	temp = df.groupby(['Protocol'])['Length'].agg([np.sum,np.mean,np.std])
-	temp.to_csv('data/Each_type.csv')
+    pass
+
+def dest_recv_most():
+    temp=df.groupby(['Source']).sum().sort_values('Length',ascending=False)
+    temp.to_csv('data/dest_recv_most.csv')
+
+def src_send_most():
+    temp=df.groupby(['Destination']).sum().sort_values('Length',ascending=False)
+    temp.to_csv('data/src_send_most.csv')
+
+def count_packet_type():
+    temp = df.groupby(['Protocol'])['Length'].agg([np.sum,np.mean,np.std])
+    temp.to_csv('data/each_type.csv')
+
 def main():
-
-	Dest_rece_most()
-	Src_send_most()
-	Count_packet_type()
-
-  
+    dest_recv_most()
+    src_send_most()
+    count_packet_type()
 
 if __name__ == '__main__':
     main()
