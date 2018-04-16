@@ -13,21 +13,25 @@ def example():
     pass
 
 def dest_recv_most():
-    temp=df.groupby(['Source']).sum().sort(['Length'])
+    temp=df.groupby(['Source']).sum().sort_values(['Length'])
     temp.to_csv('data/src_send_most.csv')
     
 def src_send_most():
-    temp=df.groupby(['Destination']).sum().sort(['Length'])
+    temp=df.groupby(['Destination']).sum().sort_values(['Length'])
     temp.to_csv('data/dest_recv_most.csv')
 
 def count_packet_type():
     temp = df.groupby(['Protocol'])['Length'].agg([np.sum,np.mean,np.std])
     temp.to_csv('data/each_type.csv')
 
+def stat_per_minute():
+	temp=df.groupby('Time')['Time'].aggregate(lambda x:np.floor(x/60))
+	temp.to_csv('test.csv')
 def main():
     dest_recv_most()
     src_send_most()
     count_packet_type()
+    stat_per_minute()
 
 if __name__ == '__main__':
     main()
